@@ -124,6 +124,10 @@ body{
 	margin-bottom: 5px;				
 }
 
+.side_bar .side_bar_bottom ul li a .item:hover{
+	color: var(--icon-color);
+}
+
 .side_bar .side_bar_bottom ul li a .icon{
 	margin-right: 8px;
 	color: var(--icon-color);
