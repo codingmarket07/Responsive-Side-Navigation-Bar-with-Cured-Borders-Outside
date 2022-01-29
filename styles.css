@@ -32,6 +32,7 @@ body{
 	display: flex;
 	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 	overflow: hidden;
+	position: relative;
 }
 
 .main_container{
@@ -176,20 +177,66 @@ body{
 	border-top-right-radius: 25px;
 }
 
-.wrapper.active .side_bar{
-	margin-left: -225px;
+.shadow{
+	display: none;
 }
 
-.wrapper.active .side_bar .side_bar_menu{
-	right: -32px;
+@media screen and (min-width: 1024px){
+	.wrapper.active .side_bar{
+		margin-left: -225px;
+	}
+
+	.wrapper.active .side_bar .side_bar_menu{
+		right: -32px;
+	}
+
+	.wrapper.active .side_bar .side_bar_menu i{
+		margin-left: 8px;
+		transform: rotate(0);
+	}
+
+	.wrapper.active .main_container{
+		width: 100%;
+		padding-left: 40px;
+	}
 }
 
-.wrapper.active .side_bar .side_bar_menu i{
-	margin-left: 8px;
-	transform: rotate(0);
-}
+@media screen and (max-width: 1024px){
+	.wrapper .side_bar{
+		position: absolute;
+		top: 0;
+		left: -225px;
+	}
+	.wrapper .side_bar .side_bar_menu{
+		right: -32px;
+	}
+	.wrapper .side_bar .side_bar_menu i{
+		margin-left: 8px;
+		transform: rotate(0);
+	}
+	.wrapper .main_container{
+		width: 100%;
+		padding-left: 40px;
+	}
+	.wrapper.active .side_bar{
+		left: 0;
+	}
+	.wrapper.active .side_bar .side_bar_menu{
+		right: -22px;
+	}
 
-.wrapper.active .main_container{
-	width: 100%;
-	padding-left: 40px;
+	.wrapper.active .side_bar .side_bar_menu i{
+		margin: 0;
+		transform: rotate(180deg);
+	}
+	.wrapper.active .shadow{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,1);
+		opacity: 0.25;
+	}	
 }
