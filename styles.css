@@ -107,7 +107,7 @@ body{
 	justify-content: center;
 }
 
-.side_bar .side_bar_menu i{
+.side_bar .side_bar_menu .i{
 	color: var(--white);
 	font-size: 18px;
 	transform: rotate(180deg);
@@ -119,7 +119,8 @@ body{
 }
 
 .side_bar .side_bar_bottom ul li a{
-	display: block;
+	display: flex;
+	align-items: center;
 	padding: 15px 25px;		
 	color: var(--white);
 	margin-bottom: 5px;				
@@ -130,8 +131,10 @@ body{
 }
 
 .side_bar .side_bar_bottom ul li a .icon{
-	margin-right: 8px;
+	margin-right: 10px;
 	color: var(--icon-color);
+	font-size: 16px;
+	height: 16px;
 }
 
 .side_bar .side_bar_bottom ul li.active a{
@@ -190,7 +193,7 @@ body{
 		right: -32px;
 	}
 
-	.wrapper.active .side_bar .side_bar_menu i{
+	.wrapper.active .side_bar .side_bar_menu .i{
 		margin-left: 8px;
 		transform: rotate(0);
 	}
@@ -210,7 +213,7 @@ body{
 	.wrapper .side_bar .side_bar_menu{
 		right: -32px;
 	}
-	.wrapper .side_bar .side_bar_menu i{
+	.wrapper .side_bar .side_bar_menu .i{
 		margin-left: 8px;
 		transform: rotate(0);
 	}
@@ -225,7 +228,7 @@ body{
 		right: -22px;
 	}
 
-	.wrapper.active .side_bar .side_bar_menu i{
+	.wrapper.active .side_bar .side_bar_menu .i{
 		margin: 0;
 		transform: rotate(180deg);
 	}
